@@ -1,0 +1,18 @@
+plugins {
+  id 'application'
+	id 'java'
+}
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+mainClassName = (System.getProperty('case') ?: 't01') + '.Main'
+
+dependencies {
+  implementation 'org.springframework:spring-core:5.3.13'
+  implementation 'org.springframework:spring-context:5.3.13'
+}

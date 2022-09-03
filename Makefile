@@ -1,4 +1,6 @@
-run: run-t03
+case = t04
 
-run-t03:
-	./gradlew run -Dcase=t03
+run: run-case
+
+run-case:
+	./gradlew run -Dcase=${case}

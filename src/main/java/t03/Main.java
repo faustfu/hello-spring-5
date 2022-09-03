@@ -1,4 +1,5 @@
-// 使用構造注入beans
+// 1. 使用構造子注入beans
+// 2. 手動建立ApplicationContext
 package t03;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;

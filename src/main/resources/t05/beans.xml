@@ -4,4 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean class="t05.app.listener.DealListener"/>
     <bean id="deal" class="t05.app.impl.FutureDeal"/>
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="basenames">
+            <list>
+                <value>t05.message</value>
+            </list>
+        </property>
+    </bean>
 </beans>

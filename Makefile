@@ -1,4 +1,4 @@
-case = t06
+case = t07
 
 run: run-case
 

@@ -1,12 +1,12 @@
-// 1. 使用 ref 屬性指定另一個 bean ID 的方式注入非基本型別的成員
-package t01;
+// 1. 使用子元素的方式封裝注入 bean, 避免被 Spring 直接存取.
+package t07;
 
-import t01.app.Person;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import t07.app.Person;
 
 public class Main {
     public static void main(String[] args) {
-        var ctx = new ClassPathXmlApplicationContext("t01/beans.xml");
+        var ctx = new ClassPathXmlApplicationContext("t07/beans.xml");
         var p = ctx.getBean("person", Person.class);
 
         p.useAxe();

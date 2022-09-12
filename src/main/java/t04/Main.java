@@ -1,4 +1,5 @@
-// 使用多國語系訊息
+// 1. 使用多國語系訊息
+// 2. 使用 value 屬性的方式設定基本型別或基本型別包裝型別的成員
 package t04;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;

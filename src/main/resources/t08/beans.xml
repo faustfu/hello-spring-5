@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="yu" class="t08.app.impl.YuShinoda">
+        <property name="names">
+            <list>
+                <value>篠田優</value>
+                <value>篠田ゆう</value>
+                <value>Yu Shinoda</value>
+            </list>
+        </property>
+        <property name="sizes">
+            <map>
+                <entry key="胸圍" value="35吋"/>
+                <entry key="腰圍" value="24吋"/>
+                <entry key="臀圍" value="34吋"/>
+                <entry key="罩杯" value="F"/>
+                <entry key="身高" value="155cm"/>
+            </map>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="暱稱">ゆうちゃん</prop>
+                <prop key="出生">1991年7月21日</prop>
+                <prop key="血型">O</prop>
+            </props>
+        </property>
+        <property name="tags">
+            <list>
+                <value>小隻馬</value>
+                <value>巨尻</value>
+            </list>
+        </property>
+        <property name="products">
+            <map>
+                <entry key="video-pred-079" value-ref="video-pred-079"/>
+                <entry key="video-bonu-020" value-ref="video-bonu-020"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="video-pred-079" class="t08.app.impl.Video">
+        <property name="title" value="中出しお義姉さんの誘惑 ～義弟の想いに巨尻がときめいて～"/>
+        <property name="link" value="https://missav.com/pred-079"/>
+    </bean>
+    <bean id="video-bonu-020" class="t08.app.impl.Video">
+        <property name="title" value="ラブラブ痴女 閉じ込め淫語で限界がまん"/>
+        <property name="link" value="https://missav.com/ja/bonu-020"/>
+    </bean>
+</beans>

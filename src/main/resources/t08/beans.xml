@@ -39,11 +39,14 @@
             </map>
         </property>
     </bean>
-    <bean id="video-pred-079" class="t08.app.impl.Video">
+    <bean id="video-pred" abstract="true" class="t08.app.impl.Video">
+        <property name="vendor" value="PREMIUM"/>
+    </bean>
+    <bean id="video-pred-079" parent="video-pred">
         <property name="title" value="中出しお義姉さんの誘惑 ～義弟の想いに巨尻がときめいて～"/>
         <property name="link" value="https://missav.com/pred-079"/>
     </bean>
-    <bean id="video-bonu-020" class="t08.app.impl.Video">
+    <bean id="video-bonu-020" parent="video-pred">
         <property name="title" value="ラブラブ痴女 閉じ込め淫語で限界がまん"/>
         <property name="link" value="https://missav.com/ja/bonu-020"/>
     </bean>

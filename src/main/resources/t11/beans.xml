@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="sora" class="t11.app.factory.PersonFactory" factory-method="getPerson">
+        <constructor-arg value="sora"/>
+        <property name="nickname" value="大老婆"/>
+    </bean>
+    <bean id="yua" class="t11.app.factory.PersonFactory" factory-method="getPerson">
+        <constructor-arg value="yua"/>
+        <property name="nickname" value="小老婆"/>
+    </bean>
+</beans>

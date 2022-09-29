@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="personFactory" class="t13.app.factory.PersonFactory" />
+
+    <bean id="sora" factory-bean="personFactory" factory-method="getPerson">
+        <constructor-arg value="sora"/>
+        <property name="nickname" value="大老婆"/>
+    </bean>
+    <bean id="yua" factory-bean="personFactory" factory-method="getPerson">
+        <constructor-arg value="yua"/>
+        <property name="nickname" value="小老婆"/>
+    </bean>
+
+    <bean id="getStaticField" class="t13.app.factory.GetFieldFactory">
+        <property name="targetClass" value="java.sql.ResultSet"/>
+        <property name="targetField" value="TYPE_SCROLL_SENSITIVE"/>
+    </bean>
+</beans>

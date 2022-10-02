@@ -1,9 +1,18 @@
 package t13.app.impl;
 
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.lang.NonNull;
 import t13.app.Person;
 
-public class SoraShiina implements Person {
+public class SoraShiina implements Person, BeanNameAware {
     private String nickname;
+
+    private String id;
+
+    @Override
+    public void setBeanName(@NonNull String name) {
+        id = name;
+    }
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
@@ -15,6 +24,7 @@ public class SoraShiina implements Person {
     public void kiss() {
         kissTime += 1;
 
-        System.out.println(nickname + "親你" + kissTime + "次");
+        System.out.println(nickname + "(" + id + ")" + "親你" + kissTime + "次");
     }
+
 }

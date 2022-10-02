@@ -1,4 +1,5 @@
 // 1. 使用 FactoryBean 介面, 不需指定工廠方法, spring 使用 getObject 作為工廠方法.
+// 2. 實作 BeanNameAware 介面可取得 id.
 package t13;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;

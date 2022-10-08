@@ -17,4 +17,9 @@
         <property name="targetBeanName" value="sprd_105"/>
         <property name="propertyPath" value="mainActress"/>
     </bean>
+    <bean id="me" class="t15.app.impl.Man">
+        <property name="wife">
+            <bean id="sprd_105.mainActress" class="org.springframework.beans.factory.config.PropertyPathFactoryBean"/>
+        </property>
+    </bean>
 </beans>

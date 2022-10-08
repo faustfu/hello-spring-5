@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="sprd_105" class="t15.app.impl.Video">
+        <property name="title" value="隱瞞老公拜託公公幫忙懷孕"/>
+        <property name="story"
+                  value="妻子老公與公公三人一起生活的森澤家。然而沒有小孩讓森澤佳奈煩惱著，與公公商量起來。公公沒有給出答案，森澤佳奈想起老公有許多兄弟，公公的精子應該很強，於是拜託了公公…"/>
+        <property name="mainActress">
+            <bean class="t15.app.impl.Actor">
+                <property name="name" value="飯岡かなこ"/>
+                <property name="info" value="2012年出道。興趣是觀看舞台劇，特技有秘書檢定、銅管樂器。"/>
+            </bean>
+        </property>
+    </bean>
+    <bean id="wife" class="org.springframework.beans.factory.config.PropertyPathFactoryBean">
+        <property name="targetBeanName" value="sprd_105"/>
+        <property name="propertyPath" value="mainActress"/>
+    </bean>
+</beans>

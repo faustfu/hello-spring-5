@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="jufd_704" class="t16.app.impl.Video"
+          p:title="被妹妹誘惑11個月的生活"
+          p:story="我的妹妹空，是一個在別人眼裡看起來不錯的弟弟。 但現在我成年了，在大學裡有了女朋友，這些天我和兄弟姐妹在一起的時間更少了。 有一天，當我以為我的大學生活過得很好時，被女朋友拋棄。 空也許為我感到難過，說：“我做你的女朋友吧？”然後吻了我。 從那天起，每一天都被主動的空所誘惑。">
+        <property name="mainActress">
+            <bean class="t16.app.impl.Actor"
+                  p:name="椎名そら"
+                  p:info="是日本愛知縣出身的演員，擁有四分之一俄羅斯血統，在擔任此職前是設計公司的攝影助理。"/>
+        </property>
+    </bean>
+    <bean id="wife" class="org.springframework.beans.factory.config.PropertyPathFactoryBean"
+          p:targetBeanName="jufd_704"
+          p:propertyPath="mainActress"/>
+    <bean id="me" class="t16.app.impl.Man">
+        <property name="wife">
+            <bean id="jufd_704.mainActress" class="org.springframework.beans.factory.config.PropertyPathFactoryBean"/>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+">
+    <bean id="yu" class="t17.app.impl.YuShinoda" init-method="init" destroy-method="close"
+          p:names-ref="yu.names"
+          p:sizes-ref="yu.sizes"
+          p:info-ref="yu.info"
+          p:tags-ref="yu.tags"
+          p:products-ref="yu.products"/>
+    <util:list id="yu.names">
+        <value>篠田優</value>
+        <value>篠田ゆう</value>
+        <value>Yu Shinoda</value>
+    </util:list>
+    <util:map id="yu.sizes">
+        <entry key="胸圍" value="35吋"/>
+        <entry key="腰圍" value="24吋"/>
+        <entry key="臀圍" value="34吋"/>
+        <entry key="罩杯" value="F"/>
+        <entry key="身高" value="155cm"/>
+    </util:map>
+    <util:properties id="yu.info">
+        <prop key="暱稱">ゆうちゃん</prop>
+        <prop key="生日">1991-07-21</prop>
+        <prop key="血型">O</prop>
+    </util:properties>
+    <util:list id="yu.tags">
+        <value>小隻馬</value>
+        <value>巨尻</value>
+    </util:list>
+    <util:map id="yu.products">
+        <entry key="video-pred-079" value-ref="video-pred-079"/>
+        <entry key="video-bonu-020" value-ref="video-bonu-020"/>
+    </util:map>
+    <bean id="video-pred" abstract="true" class="t17.app.impl.Video" p:vendor="PREMIUM"/>
+    <bean id="video-pred-079" parent="video-pred"
+          p:title="中出しお義姉さんの誘惑 ～義弟の想いに巨尻がときめいて～"
+          p:link="https://missav.com/pred-079"/>
+    <bean id="video-bonu-020" parent="video-pred"
+          p:title="ラブラブ痴女 閉じ込め淫語で限界がまん"
+          p:link="https://missav.com/ja/bonu-020"/>
+</beans>

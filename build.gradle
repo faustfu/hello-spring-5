@@ -3,14 +3,16 @@ plugins {
     id 'java'
 }
 
+
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+//applicationDefaultJvmArgs = ["--add-opens", "java.base/jdk.internal.loader=ALL-UNNAMED"]
+mainClassName = (System.getProperty('case') ?: 't01') + '.Main'
 
 repositories {
     mavenCentral()
 }
-
-mainClassName = (System.getProperty('case') ?: 't01') + '.Main'
 
 dependencies {
     implementation 'org.springframework:spring-core:5.3.23'
@@ -18,4 +20,5 @@ dependencies {
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
     implementation 'c3p0:c3p0:0.9.1.2'
     implementation 'org.postgresql:postgresql:42.5.0'
+    implementation 'dom4j:dom4j:1.6.1'
 }
